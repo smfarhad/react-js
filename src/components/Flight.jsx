@@ -3,18 +3,17 @@
 import Button from './common/button/Button';
 import { PropTypes } from 'prop-types';
 import IsTicketable from './IsTicketable'
+
 Flight.propTypes = {
-  flightNo: PropTypes.number.isRequired,
+  flightNo: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   imgSrc: PropTypes.string.isRequired,
   ticketAble: PropTypes.bool.isRequired
 };
 
 const defaultImgSrc = '/src/assets/images/1-200x200.jpg';
-
-export default function Flight({flightNo=0,imgSrc=defaultImgSrc,ticketAble=false}) {
-
+export default function Flight({flightNo,imgSrc,ticketAble}) {
   return (
-    <div className="container mb-3">
+    <div className='mb-3'>
       <div className="card col-12 mb-12">
         <div className="card-header">
           <h3>Flight list {flightNo}</h3>
@@ -42,3 +41,9 @@ export default function Flight({flightNo=0,imgSrc=defaultImgSrc,ticketAble=false
     </div>
   );
 }
+
+Flight.defaultProps = {
+  flightNo: '',
+  imgSrc: defaultImgSrc,
+  ticketAble: false,
+};
