@@ -3,8 +3,8 @@
 import Button from "./common/button/Button";
 import { PropTypes } from "prop-types";
 import IsTicketable from "./IsTicketable";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import ShwoFareTray from "./ShowFareTray";
+
 Flight.propTypes = {
   flightData: PropTypes.object.isRequired,
 };
@@ -26,9 +26,7 @@ export default function Flight({ flightData }) {
 
   console.log("e");
   console.log(flightData);
-  const handleClick = ()=>{
-    alert('Handle Event');
-  }
+
   return (
     <div className="mb-3" data-flgiht={flightData.id}>
       <div className="card col-12 mb-12">
@@ -73,10 +71,8 @@ export default function Flight({ flightData }) {
               <div className="text-center right-section-ctn">
                 <div> BDT {netTotalPrice.netTotalFareAmount}</div>
                 <div> BDT {netTotalPrice.netTotalGrossFareAmount}</div>
-                <Button name="Book Now" /> &nbsp;
-                <span onClick={handleClick} title="fareDetails">
-                  <FontAwesomeIcon icon={faQuestionCircle} />
-                </span>
+                <Button name="Book Now"/> &nbsp;
+                <ShwoFareTray/>
               </div>
             </div>
           </div>
@@ -85,7 +81,6 @@ export default function Flight({ flightData }) {
     </div>
   );
 }
-
 Flight.defaultProps = {
   flightData: {},
 };
