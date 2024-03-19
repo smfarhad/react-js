@@ -30,9 +30,10 @@ export default function Flight({ flightData }) {
   return (
     <div className="mb-3" data-flgiht={flightData.id}>
       <div className="card col-12 mb-12">
-        <div className="card-header">
+        <div className="card-body">
           <div className="row">
-            <div className="col-12">
+            <div className="col-9 left-section">
+            <div className="itinerary-header">
               <p>{origin.dateTime}</p>
               <p>
                 {origin.airport}{" "}
@@ -42,11 +43,6 @@ export default function Flight({ flightData }) {
                 {destination.airport}
               </p>
             </div>
-          </div>
-        </div>
-        <div className="card-body">
-          <div className="row">
-            <div className="col-9 left-section">
               <div>
                 <p>
                   Pellentesque vel nisl diam. Sed massa massa, placerat
@@ -68,11 +64,16 @@ export default function Flight({ flightData }) {
               </div>
             </div>
             <div className="col-3 right-section">
-              <div className="text-center right-section-ctn">
-                <div> BDT {netTotalPrice.netTotalFareAmount}</div>
-                <div> BDT {netTotalPrice.netTotalGrossFareAmount}</div>
-                <Button name="Book Now"/> &nbsp;
-                <ShwoFareTray/>
+              <div className="right-section-ctn">
+                <div className="net-gross-commission text-center mb-3">
+                    <div> 5.00 % Discount</div>
+                    <div> BDT {netTotalPrice.netTotalGrossFareAmount}</div>
+                    <div className="text-danger"> <del>BDT {netTotalPrice.netTotalGrossFareAmount}</del></div>
+                </div>
+                <div className="boonNowFareTray text-center">
+                      <Button name="Book Now"/> &nbsp;
+                      <ShwoFareTray/>
+                </div>
               </div>
             </div>
           </div>

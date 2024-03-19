@@ -4,7 +4,7 @@ Button.propTypes = {
     name: PropTypes.string.isRequired
 };
 export default function Button({name}){
-    const buttonClass = ['btn', 'btn-primary', styles.bold, styles.color].join(' ');
+    const buttonClass = ['btn', 'btn-primary','btn-sm', styles.bold, styles.color].join(' ');
     return(
         <button className={buttonClass}>
             {name}
