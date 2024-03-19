@@ -4,6 +4,7 @@ import Button from "./common/button/Button";
 import { PropTypes } from "prop-types";
 import IsTicketable from "./IsTicketable";
 import ShwoFareTray from "./ShowFareTray";
+import moment from "moment";
 
 Flight.propTypes = {
   flightData: PropTypes.object.isRequired,
@@ -34,14 +35,15 @@ export default function Flight({ flightData }) {
           <div className="row">
             <div className="col-9 left-section">
             <div className="itinerary-header">
-              <p>{origin.dateTime}</p>
-              <p>
+             <p>
                 {origin.airport}{" "}
                 <span>
                   <img src={planeFlight} alt=">" />
                 </span>{" "}
                 {destination.airport}
               </p>
+              <p>{moment(origin.dateTime).format('LL')}</p>
+              
             </div>
               <div>
                 <p>
@@ -66,8 +68,8 @@ export default function Flight({ flightData }) {
             <div className="col-3 right-section">
               <div className="right-section-ctn">
                 <div className="net-gross-commission text-center mb-3">
-                    <div> 5.00 % Discount</div>
-                    <div> BDT {netTotalPrice.netTotalGrossFareAmount}</div>
+                    <div className="text-danger"> 5.00 % Discount</div>
+                    <div className="text-success"> BDT {netTotalPrice.netTotalGrossFareAmount}</div>
                     <div className="text-danger"> <del>BDT {netTotalPrice.netTotalGrossFareAmount}</del></div>
                 </div>
                 <div className="boonNowFareTray text-center">
