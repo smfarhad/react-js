@@ -11,7 +11,7 @@ export default function ShwoFareTray() {
       <span className="fare-break-down-icon" onClick={()=>{handleClick(!showTray)}} title="fareDetails">
         <FontAwesomeIcon icon={faQuestionCircle}/>
       </span>        
-      <div className={`booking-info-data ${showTray ? 'd-none':''}`}>
+      <div className={`booking-info-data ${showTray==1 ? 'd-none':''}`}>
         <h6>Base Fare </h6>
         <div className="bi-info">
           <p>Adult ( 1 x 37730)</p>

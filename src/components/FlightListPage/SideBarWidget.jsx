@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import CheckBox from "../common/CheckBox";
 
-CheckboxList.propTypes = {
+SideBarWidget.propTypes = {
   list: PropTypes.arrayOf(PropTypes.string).isRequired,
   name: PropTypes.string.isRequired,
 };
 
-export default function CheckboxList({name, list }) {
+export default function SideBarWidget({name, list }) {
   const stops = list.map((stopName, index) => (
     <li className="list-group-item" key={index}>
       <CheckBox name={stopName} index={index} />

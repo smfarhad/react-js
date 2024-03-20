@@ -9,12 +9,11 @@ export default function CheckBox({name,index}) {
     <div className="form-check">
       <input
             className="form-check-input"
-            type="checkbox"
-            value=""
-            id={uniqueAttribute}
-        />
+              type="checkbox"
+              value=""
+              id={uniqueAttribute}/>
       <label className="form-check-label" htmlFor={uniqueAttribute}>
-       {name}
+        {name}
       </label>
     </div>
   );

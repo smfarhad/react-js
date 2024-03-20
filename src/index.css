@@ -1,37 +1,60 @@
-.booking-info-data{
-    background: #eee;
-    border: 1px solid #ccc;
-    position: absolute;
-    z-index: 1000;
-    padding: 10px;
-    width: 250px;
-    font-size: 12px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
- 
-.booking-info-data >*{
-    text-align: left;
-}
-.booking-info-data .bi-info{
-    display: flex;
-    justify-content: space-between;
-}
-.bi-info p{
-    margin: 2px;
+.booking-info-data {
+  background: #eee;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 1000;
+  padding: 10px;
+  width: 250px;
+  font-size: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.right-section-ctn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100%;
+.booking-info-data > * {
+  text-align: left;
+}
+.booking-info-data .bi-info {
+  display: flex;
+  justify-content: space-between;
+}
+.bi-info p {
+  margin: 2px;
 }
 
-.itinerary-header{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    justify-content: space-between;
+.right-section-ctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%;
 }
+
+.itinerary-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.tab-pane {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tab-pane.show {
+  display: block;
+  opacity: 1;
+}
+
+/*** No of Traveller & Seat classs Tray Start ***/
+.no-of-pax-class-tray {
+  background: #eee;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 1000;
+  padding: 10px;
+  width: 250px;
+  font-size: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*** No of Traveller & Seat classs Tray End ***/

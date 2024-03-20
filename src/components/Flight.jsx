@@ -15,8 +15,7 @@ export default function Flight({ flightData }) {
   const routes = flightData.legs;
   const firstRoute = routes[0];
   const firstSegment = firstRoute.segmentDetails[0];
-  const lastSegment =
-    firstRoute.segmentDetails[firstRoute.segmentDetails.length - 1];
+  const lastSegment = firstRoute.segmentDetails[firstRoute.segmentDetails.length-1];
   const origin = firstSegment.origin;
   const destination = lastSegment.destination;
   const prices = flightData.priceBreakDownWithMarkup;
@@ -24,7 +23,6 @@ export default function Flight({ flightData }) {
   //const destination = lastSegment.destination;
   console.log("s");
   console.log(netTotalPrice.netTotalGrossFareAmount);
-
   console.log("e");
   console.log(flightData);
 
